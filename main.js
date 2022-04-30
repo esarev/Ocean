@@ -1,6 +1,7 @@
 const dayNight = document.querySelector('.dayNight'),
     menuToggle = document.querySelector('.menuToggle'),
-    body = document.querySelector('body');
+    body = document.querySelector('body'),
+    navigation = document.querySelector('.navigation');
 
     dayNight.addEventListener('click', function() {
         body.classList.toggle('dark');
@@ -9,4 +10,5 @@ const dayNight = document.querySelector('.dayNight'),
     
     menuToggle.addEventListener('click', function() {
         menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active');
     });
