@@ -10,6 +10,10 @@
     --black: #333;
     --white: #fff;
 }
+.dark {
+    --black: #fff;
+    --white: #333;
+}
 header {
     position: absolute;
     width: 100%;
@@ -84,11 +88,15 @@ header .logo {
     user-select: none;
     mix-blend-mode: screen;
 }
+.dark .mask {
+    filter: invert(1);
+    mix-blend-mode: multiply;
+}
 .main h2 {
     position: relative;
     z-index: 3;
     font-size: 16vw;
-    color: var(--white);
+    color: #fff;
     text-shadow: 0 20px 30px rgba(0, 0, 0, .2);
 }
 .navigation {
@@ -124,4 +132,29 @@ header .logo {
     background: var(--black);
     color: var(--white);
     transition: .3s;
+}
+.copyrightText {
+    position: absolute;
+    left: 100px;
+    bottom: 40px;
+    font-weight: 500;
+    font-size: 1.2em;
+    z-index: 4;
+    color: var(--black);
+}
+.social {
+    position: absolute;
+    right: 100px;
+    bottom: 40px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+}
+.social li {
+    list-style: none;
+}
+.social li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.75em;
 }
