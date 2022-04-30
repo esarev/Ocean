@@ -5,10 +5,56 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+} 
+:root {
+    --black: #333;
+    --white: #fff;
 }
-body {
+header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+header .logo {
+    position: relative;
+    display: inline-flex;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--black);
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+.rightSide {
+    display: flex;
+}
+.btns {
+    position: relative;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.btns.menuToggle ion-icon {
+    font-size: 3em;
+}
+.btns ion-icon {
+    font-size: 1.5em;
+    color: var(--black);
+}
+.btns ion-icon:nth-child(2) {
+    display: none;
+}
+.btns.active ion-icon:nth-child(2) {
+    display: block;
+}
+.btns.active ion-icon:nth-child(1) {
+    display: none;
 }
